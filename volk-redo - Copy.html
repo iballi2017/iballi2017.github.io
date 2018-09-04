@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="volk-redo.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Slabo+27px|Suranna" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" src="volk-redo.css">
+    <style>
+    /* All "Background commented out are left un-deleted for debugging purposes" */
+body{
+    /* background-color: red; */
+    font-family: Roboto;
+}
+nav{
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+b{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.search-icon{
+    position: absolute;
+    width:12px;
+    height: 12px;
+    margin: -20px 0 0 250px;
+}
+.menu-icon{
+    position: absolute;
+    width:30px;
+    height: 30px;
+    margin: -20px 0 0 360px;
+}
+.volks{
+    /* background: greenyellow; */
+    width: 80%;
+    height: 400px;
+    float: right;
+    margin: 0px 27px 0 0px;
+}
+.volks img{
+    width: 100%;
+    height: 400px;
+}
+.section{
+    width: 100%;
+}
+.content{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+}
+.date{
+    display: none;
+}
+.year{
+    font-family: 'Suranna', serif;
+    width:100px;
+    height: 50px;
+    position: absolute;
+    margin: 270px 0 100px -30px;
+    font-size: 30px;
+    transform: rotate(-90deg);
+}
+.hr1{
+    position: absolute;
+    width: 30px;
+    margin: 250px 0 0 10px;
+    transform: rotate(-90deg);
+    border: 1px solid #000;
+}
+.hr2{
+    position: absolute;
+    width: 30px;
+    margin: 380px 0 0 10px;
+    transform: rotate(-90deg);
+    border: 1px solid #000;
+}
+.description{
+    /* background: blue; */
+    width: 100%;
+    margin-top: 410px;
+    text-align: justify;
+}
+.contact-logo{
+    margin-top: 10px;
+    background: white;
+    width: 70px;
+    height: 30px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+.contact{
+    display: none;
+}
+.contact-logo img{
+    width: 25px;
+    height: 25px;
+}
+.footer{
+    background-color: #444;
+    width:100%;
+    height: 30px;
+    color:#fff;
+    margin-top: 10px;
+    padding: 7px 8px 0 8px;
+}
+.footer .line hr{
+    margin: -10px 10px 0 177px;
+    width:50px;
+    position: absolute
+}
+.footer .pre-num{
+    margin-left: 70px;
+}
+.footer .next-num{
+    margin-left: 80px;
+}
+.pre{
+    position: absolute;
+    width: 40px;
+    margin: 0 0 0 20px;
+    font-size: 30px;
+    color: #444;
+    font-weight: 300;
+}
+.nex{
+    position: absolute;
+    width: 40px;
+    margin: 0px 0 0 376px;
+    font-size: 30px;
+    color: #444;
+    font-weight: 300;
+}
+.nav-content{
+    display: none;
+}
+@media only screen and (max-width: 320px){
+    body{
+        /* background: rgb(114, 140, 165); */
+    }
+    .menu-icon{
+        position: absolute;
+        width:30px;
+        height: 30px;
+        margin: -20px 0 0 365px;
+    }
+    nav{
+        width: 415px;
+        height: 40px;
+        background-color: #fff;
+    }
+    .section{
+        width: 415px;
+        /* background: blue; */
+    }
+    .description{
+        /* background: green; */
+        width: 357px;
+        margin-top: 410px;
+        margin-left: 30px;
+        text-align: justify;
+    }
+    .footer{
+        background-color: #444;
+        width:400px;
+        height: 30px;
+        color:#fff;
+        margin-top: 10px;
+        padding: 7px 8px 0 8px;
+    }
+}
+@media only screen and (max-width: 375px){
+    body{
+        /* background: rgb(152, 196, 238); */
+    }
+    .menu-icon{
+        position: absolute;
+        width:30px;
+        height: 30px;
+        margin: -20px 0 0 365px;
+    }
+    nav{
+        width: 415px;
+        height: 40px;
+        background-color: #fff;
+    }
+    .section{
+        width: 415px;
+        /* background: blue; */
+    }
+    .description{
+        /* background: green; */
+        width: 357px;
+        margin-top: 410px;
+        margin-left: 30px;
+        text-align: justify;
+    }
+    .footer{
+        background-color: #444;
+        width:400px;
+        height: 30px;
+        color:#fff;
+        margin-top: 10px;
+        padding: 7px 8px 0 8px;
+    }
+}
+@media only screen and (min-width: 768px){
+    body{
+        /* background: blue; */
+    }
+    nav{
+        width: 95%;
+        height: 40px;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+    .search-icon{
+        position: absolute;
+        width:12px;
+        height: 12px;
+        margin: -15px 0 0 600px;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .nav-content{
+        /* background: red; */
+        display: block;
+        float: right;
+        margin-top:-16px;
+    }
+    .nav-content a{
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #000;
+    }
+    .nav-content .category a{
+        margin-right: 200px;
+    }
+    .nav-content .classic a{
+        margin-right: 80px;
+    }
+    .volks{
+        /* background: greenyellow; */
+        width: 45%;
+        height: 400px;
+        float: left;
+        margin: 0px 0 0 60px;
+    }
+    .volks img{
+        width: 100%;
+        height: 443px;
+    }
+    .year{
+        font-family: 'Suranna', serif;
+        width:100px;
+        height: 50px;
+        position: absolute;
+        margin: 207px 0 100px -430px;
+        font-size: 50px;
+        transform: rotate(-90deg);
+    }
+    .content{
+        font-family: 'Playfair Display', serif;
+        /* font-family: 'Slabo 27px', serif; */
+        font-size: 50px;
+        width:300px;
+        height: 300px;
+        position: absolute;
+        text-align: left;
+        margin: 60px 0 0 420px;
+    }
+    .description{
+        /* background: brown; */
+        width: 35%;
+        /* position: absolute; */
+        margin: 220px 0 107px 424px;
+        text-align: justify;
+        line-height: 25px;
+        font-size: 10px;
+    }
+    .footer{
+        background-color: #444;
+        width:250px;
+        height: 10px;
+        margin: 10px 0 0 240px;
+        color:#fff;
+        font-size: 12px;
+        padding: 20px 50px;
+    }
+    .footer .line hr{
+        margin: -10px 10px 0 154px;
+        width:50px;
+        position: absolute
+    }
+    .pre{
+        position: absolute;
+        width: 40px;
+        margin: -60px 0 0 650px;
+        font-size: 30px;
+    }
+    .nex{
+        position: absolute;
+        width: 40px;
+        margin: -60px 0 0 682px;
+        font-size: 30px;
+    }
+    .contact-logo{
+        margin-top: 20px;
+        background: white;
+        width: 70px;
+        height: 30px;
+        margin-top: -40px;
+        font-weight: 600;
+    }
+    .contact img{
+        width: 25px;
+        height: 25px;
+    }
+    .year{
+        width:100px;
+        height: 50px;
+        position: absolute;
+        margin: 250px 0 100px -420px;
+        font-size: 40px;
+        transform: rotate(-90deg);
+    }
+    .hr1{
+        position: absolute;
+        width: 30px;
+        margin: 105px 0 0 10px;
+        transform: rotate(-90deg);
+        border: 1px solid #000;
+    }
+    .hr2{
+        position: absolute;
+        width: 30px;
+        margin: 425px 0 0 10px;
+        transform: rotate(-90deg);
+        border: 1px solid #000;
+    }
+}
+@media only screen and (min-width: 1024px){
+    body{
+        /* background: orangered; */
+    }
+    nav{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 0px;
+        background-color: #fff;
+        padding: 20px 40px;
+        height: 45px;
+    }
+    b{
+        font-size: 20px;
+    }
+    .search-icon{
+        width:13px;
+        height: 13px;
+        margin: -10px 0 0 1030px;
+    }
+    .nav-content{
+        /* background: red; */
+        display: block;
+        float: right;
+        margin-top:-17px;
+    }
+    .nav-content a{
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #000;
+    }
+    .nav-content .category a{
+        margin-right: 345px;
+    }
+    .nav-content .classic a{
+        margin-right: 76px;
+    }
+    .volks{
+        /* background: greenyellow; */
+        width: 32%;
+        height: 600px;
+        margin: 0px 0 0 168px;
+    }
+    .volks img{
+        width: 100%;
+        height: 600px;
+    }
+    
+.year{
+    width:100px;
+    height: 50px;
+    position: absolute;
+    margin: 475px 0 0 -565px;
+    font-size: 40px;
+    transform: rotate(-90deg);
+}
+.hr1{
+    position: absolute;
+    width: 30px;
+    margin: 440px 0 0 80px;
+    transform: rotate(-90deg);
+    border: 1px solid #000;
+}
+.hr2{
+    position: absolute;
+    width: 30px;
+    margin: 583px 0 0 80px;
+    transform: rotate(-90deg);
+    border: 1px solid #000;
+}
+    .content{
+        font-family: 'Playfair Display', serif;
+        /* font-family: 'Slabo 27px', serif; */
+        font-size: 90px;
+        width:500px;
+        height: 300px;
+        position: absolute;
+        margin: 120px 0 0 680px;
+    }
+    .description{
+        position: absolute;
+        /* background-color: green; */
+        width:450px;
+        height: 100px;
+        margin: 400px 0 0 680px;
+        font-size: 12px;
+        line-height: 25px;
+    }
+    .footer{
+       /* background-color: #444;
+        width:250px;
+        height: 10px;
+        margin: 600px 0 0 240px;
+        color:#fff;
+        font-size: 12px;
+        padding: 20px 50px;
+*/
+        background-color: #444;
+        width:350px;
+        height: 10px;
+        margin: 600px 0 0 680px;
+        color:#fff;
+        font-size: 12px;
+        padding: 40px 70px;
+    }
+    .pre{
+        position: absolute;
+        /* background-color: red; */
+        width: 40px;
+        margin: -60px 0 0 1190px;
+        font-size: 30px;
+        color: #444;
+    }
+    .nex{
+        position: absolute;
+        /* background-color: red; */
+        width: 40px;
+        margin: -60px 0 0 1227px;
+        font-size: 30px;
+        color: #444;
+    }
+    .footer .line hr{
+        margin: -10px 10px 0 240px;
+        width:50px;
+        position: absolute
+    }
+    .footer .pre-num{
+        margin-left: 150px;
+    }
+    .footer .next-num{
+        margin-left: 80px;
+    }
+    .contact{
+        display: block;
+    }
+    .contact-logo{
+        display: none;
+    }
+    .contact{
+        /* background-color: rgb(115, 196, 40); */
+        width:250px;
+        height: 80px;
+        transform: rotate(-90deg);
+        margin: -400px 0 0 1168px;
+        position: absolute;
+        font-size: 12px;
+        font-family: 'Kosugi Maru', sans-serif;
+        font-weight: 600;
+    }
+    .facebook{
+        margin-right: 50px;
+    }
+}</style>
+</head>
+<body>
+    <nav>
+            <b>Classic.</b>
+        <!-- <a href="#"> -->
+            <div >
+                <img src="https://res.cloudinary.com/dhksbreon/image/upload/v1535886855/magnifying-glass.png" class="search-icon">
+            </div>
+        <!-- </a> -->
+        <!-- <a href="#"> -->
+            <!-- <div > -->
+                <img src="https://res.cloudinary.com/dhksbreon/image/upload/v1535886325/menu-interface-symbol-of-three-horizontal-straight-lines.png" class="menu-icon">
+            <!-- </div> -->
+        <!-- </a> -->
+        <div class="nav-content">
+                <span class="classic"><a href="#">Classic Cars</a></span>
+            <span class="category"><a href="#">Category</a></span>
+            <span class="menu"><a href="#">Menu</a></span>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="content">Volkswagen Beetle</div>
+        <div class="volks"><img src="https://res.cloudinary.com/dhksbreon/image/upload/v1535886606/volkswagen-photo.png"></div>
+    </div>
+
+    <!--<div class="date">
+         <span> 
+            <hr style="margin: 50px 0 0 20px; width:30px; border:1px solid black"></span><span style="margin-top:16px">1965</span><span><hr style="margin: 50px 20px 0 20px; width:30px; border:1px solid black">
+        </span>
+    </div>-->
+    <span><hr class="hr1"></span><span class="year">1965</span><span><hr class="hr2"></span>
+    <div class="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
+    
+    <div class="footer">Scroll right <span class="pre-num">05</span><span class="line"><hr></span><span class="next-num">01</span></div>
+        
+        <a href="#">
+            <div class="pre">
+                &lt;
+            </div>
+        </a><a href="#">
+            <div class="nex">
+                &gt; 
+            </div>
+        </a>
+
+        <div class="date">
+            <span>
+                <hr style="margin: 50px 0 0 20px; width:30px; border:1px solid black">
+            </span>
+            <span style="margin-top:16px">
+                1965
+            </span>
+            <span>
+                <hr style="margin: 50px 20px 0 20px; width:30px; border:1px solid black">
+            </span>
+        </div>
+        <div class="contact">
+            <span class="facebook">Facebook</span><span class="instagram">Instagram</span>
+        </div>
+        <div class="contact-logo">
+            <a href="#"><img src="https://res.cloudinary.com/dhksbreon/image/upload/v1535647953/facebook-logo-in-circular-button-outlined-social-symbol.png" class="facebook"></a> <a href="#"><img src="https://res.cloudinary.com/dhksbreon/image/upload/v1535647942/social-linkedin-circular-button.png"></a>
+        </div>
+</body>
+</html>
