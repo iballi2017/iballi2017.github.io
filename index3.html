@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>blogpage-update</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="blogpage-update.css">
+<style>
+nav{
+  width:100%;
+  height: 25%;
+  padding-top:0.5%;
+  margin: 7% 0 -2% 0;
+}
+.nav-img{
+    position: absolute;
+    width: 72px;
+    height:70px;
+    margin: -4% 0 0 5%;
+}
+.nav-menu{
+  float:right;
+  margin: -3% 0 -0.3% 70%;
+  position: absolute
+}
+.nav-menu a{
+  text-decoration: none;
+  margin: 7px;
+  color: #000;
+  opacity: 0.5;
+}
+.nav-menu a:hover{
+    opacity: 1;
+    text-decoration: none;
+  }
+.heading{
+  font-family: arial;
+  font-size: 50px;
+  text-align:center;
+  margin:50px 120px 0 120px;
+}
+.heading .previous{
+  color:#000;
+  float: left;
+  font-size: 45px;
+}
+.heading .next{
+  color:#000;
+  float: right;
+  font-size: 45px;
+}
+.under-line{
+    width: 100%;
+}
+.under-line hr{
+    width:50px;
+}
+.reaction{
+    width: 100%;
+    text-align: center;
+    font-family: arial;
+    font-size: 16px;
+    float:center;
+    margin-bottom:40px;
+    color: #999;
+    /*padding-left: 515px;
+    padding-top: -50px;*/
+}
+.reaction a{
+    opacity: 0.6; 
+}
+.reaction a{
+    text-decoration: 
+}
+.reaction a:hover{
+    opacity: 1;
+}
+.point1{
+  margin:20px 10px 20px 20px;
+}
+.point2{
+  margin:20px 30px 20px 10px;
+}
+.share-icon{
+  height: 40px;
+  width: 33px;
+  position: absolute;
+  margin:-2.5% 0 0 6%;
+}
+p{
+    margin: 0 120px 0 120px;
+    font-size: 16px;
+    line-height: 33px;
+    text-align: left;
+}
+img{
+  height:40%;
+  width:40%;
+  margin: 10px 15px 10px 120px;
+  float: left;
+}
+.bottom-reaction{
+    width: 80%;
+    height:50px;
+    font-family: arial;
+    font-size: 11px;
+    padding-left: 0px;
+    padding-top: 10px;
+    /*margin:0 120px 0 13*/
+    margin: 40px 120px 0 120px;
+}
+.bottom-reaction .platform{
+  float: left;
+}
+.bottom-reaction .platform a{
+  color: #777;
+}
+.bottom-reaction .reaction-dup{
+  float:right;
+}
+.bottom-reaction .reaction-dup a:hover{
+  color:#00f;
+}
+.bottom-reaction .platform div{
+  background-color: #ccc;
+  width: 60px;
+  height: 25px;
+  border-radius:5px;
+  margin:2px;
+  padding-top: 3px;
+  float: left;
+}
+.comment-section{
+  float:center;
+  margin-top: 5%;
+}
+.comment-section input{
+  border-radius:10px;
+  height:40px;
+  width:600px;
+  padding:10px;
+  font-size: 14px;
+  }
+.main-input{
+  position: absolute;
+  height:50px;
+  width:700px;
+  margin: -110px 0 0 -345px;
+  }
+.comment-section button{
+  background-color:rgba(0,0,200,0.3);
+  position: absolute;
+  margin: -110px 0 0 372px;
+  border-radius:8px;
+  border-style: inset;
+  border-bottom-style: none;
+  border-right-style: none;
+  border-style: inset;
+  height:2.2%;
+  width:8%;
+  font-size: 14px;
+  background-color: #99ffff;
+}
+.comment-section button:hover{
+  background-color:rgba(0,100,200,0.3);
+}
+.comm-number{
+  height: 80px;
+  width: 120px;
+  margin: 160px 0 0 120px;
+  font-size: 20px;
+  text-align: left;
+}
+.comm-hr{
+  width: 80px;
+  position: absolute;
+  margin: -40px 0 0 120px;
+}
+.comm-hr hr{
+  border: 0.5px solid #ccc;
+}
+.comm-avatar{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin: -110px 0 0 -430px;
+}
+.avatar1{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 20px 0 0 -440px;
+}
+.comm1{
+  width:370px;
+  height:80px;
+  position: absolute;
+  margin: 20px 0 0 -380px;
+}
+.comment1{
+  position: absolute;
+  width:800px;
+  height: 50px;
+  margin: 33px 0 0 100px;
+}
+.comment1 p{
+  font-size: 12px;
+  line-height: 19px;
+  color:#888;
+}
+.comment1 p b{
+  color:#555;
+}
+.avatar2{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 130px 0 0 400px;
+}
+.comm2{
+  width:330px;
+  height:50px;
+  position: absolute;
+  transform: scaleX(1);
+  margin: 130px 0 0 65px;
+}
+.comment2{
+  position: absolute;
+  width:800px;
+  height: 50px;
+  margin: 135px 0 0 520px;
+}
+.comment2 p{
+  font-size: 12px;
+  line-height: 19px;
+  color:#888;
+}
+.comment2 p b{
+  color:#555;
+}
+.avatar3{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 190px 0 0 -440px;
+}
+.comm3{
+  width:300px;
+  height:50px;
+  position: absolute;
+  margin: 190px 0 0 -380px;
+}
+.comment3{
+  position: absolute;
+  width:800px;
+  height: 50px;
+  margin: 200px 0 0 100px;
+}
+.comment3 p{
+  font-size: 12px;
+  line-height: 19px;
+  color:#888;
+}
+.comment3 p b{
+  color:#555;
+}
+.avatar4{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 250px 0 0 -440px;
+}
+.comm4{
+  width:300px;
+  height:50px;
+  position: absolute;
+  margin: 250px 0 0 -380px;
+}
+.comment4{
+  position: absolute;
+  width:800px;
+  height: 50px;
+  margin: 255px 0 0 100px;
+}
+.comment4 p{
+  font-size: 12px;
+  line-height: 19px;
+  color:#888;
+}
+.comment4 p b{
+  color:#555;
+}
+.avatar5{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 300px 0 0 400px;
+}
+.comm5{
+  width:330px;
+  height:50px;
+  position: absolute;
+  margin: 300px 0 0 65px;
+}
+.comment5{
+  position: absolute;
+  width:800px;
+  height: 50px;
+  margin: 306px 0 0 520px;
+}
+.comment5 p{
+  font-size: 12px;
+  line-height: 19px;
+  color:#888;
+}
+.comment5 p b{
+  color:#555;
+}
+.avatar6{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 370px 0 0 -440px;
+}
+.comm6{
+  width:300px;
+  height:50px;
+  position: absolute;
+  margin: 370px 0 0 -380px;
+}
+.comment6{
+  position: absolute;
+  width:800px;
+  height: 50px;
+  margin: 376px 0 0 100px;
+}
+.comment6 p{
+  font-size: 12px;
+  line-height: 19px;
+  color:#888;
+}
+.comment6 p b{
+  color:#555;
+}
+.bottom-nav{
+    background-color: #000;
+    height: 40%;
+    width: 100%;
+    color: #fff;
+}
+.bottom-hr{
+  width: 100%;
+  margin-top: 50%;
+}
+.bottom-hr hr{
+border: 1px solid #f4f4f4;
+}
+.bottom{
+  width: 100%;
+  text-align:center;
+  margin:50px 120px 0 120px;
+}
+.bottom .previous{
+  color:#000;
+  float: left;
+  font-size: 45px;
+}
+.bottom .next{
+  color:#000;
+  float: right;
+  font-size: 45px;
+}
+.bottom-pre{
+  width: 200px;
+  height: 50px;
+  font-size: 15px;
+  position: absolute;
+  margin: 2780px 0 0 150px;
+}
+.bottom-pre a{
+  color:#333;
+  text-decoration: none;
+}
+.bottom-pre a:hover{
+  text-decoration: none;
+}
+.bottom-nex{
+  width: 200px;
+  height: 50px;
+  font-size: 15px;
+  position: absolute;
+  text-align: right;
+  margin: 2780px 0 0 790px;
+}
+.bottom-nex a{
+  color:#333;
+  text-decoration: none;
+}
+.bottom-nex a:hover{
+  text-decoration: none;
+}
+.bottom-pre b{
+  font-size: 18px;
+}
+.bottom-nex b{
+  font-size: 18px;
+}
+.bottom-nav{
+  width: 100%;
+  padding: 60px 70px 60px 90px;
+  background-color: #f4f4f4;
+  margin-top: 60px;
+}
+.bottom-nav .twi{
+  width: 20px;
+  height: 20px;
+  float: right;
+  
+}
+.bottom-nav .twi img{
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 -130px;
+}
+.bottom-nav .fac{
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+.bottom-nav .fac img{
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 -65px;
+}
+.bottom-nav .inst{
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+.bottom-nav .inst img{
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 -70px;
+}
+.bottom-nav .dribb{
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+.bottom-nav .dribb img{
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 40px;
+}
+.copyright{
+  float: left;
+  font-size: 12px;
+  color:#333;
+}
+.note{
+  position: absolute;
+  margin: 23px 0 0 0;
+  float: left;
+  color:#999;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+        <nav>
+            <a href="#"><div class="nav-img"><img src="https://i.imgur.com/dXBfIT8.png"></div></a>
+                <div class="nav-menu">
+                  <a href="#">Work</a>
+                  <a href="#">About</a>
+                  <a href="#">Blog</a>
+                  <a href="#">Contract</a>
+                </div>
+        </nav>    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12" style="text-align: center">
+                    <div class="heading">
+                            <span><a href="#" class="previous round">&#8249;</a></span>
+                           Goodbye, Photoshop
+                             <span><a href="#" class="next round">&#8250;</a></span>
+                    </div>
+                    <hr style="width:100px; margin-top:1px">
+                    <div class="reaction">
+                        August 29, 2015 
+                        <span class="point1"><b>&#8729</b></span>
+                        <a href="#" style="text-decoration:none; color:red; margin-right:-10px"> &#x2764 125 likes</a>
+                        <a href="#" style="text-decoration:none; color:#000"><span class="point2"><b>&#8729</b></span> &#128172 6 comments</a>
+                    </div>
+                    <p>
+                        <article>
+                                
+                            <p>In venenatis rutrum arcu eu iaculis. Aliquam erat volutpat. Vestibulum ullamcorper felis ut enim condimentum, nec faucibus ipsum imperdiet. Vestibulum feugiat dui sed dictum fringilla. In tristique ipsum sit amet varius pellentesque. Proin ante felis, auctor et varius eget, fermentum quis urna. Integer sed euismod quam. Nullam magna erat, porta ut porta quis, scelerisque ut arcu. Phasellus rutrum tortor eget lacus accumsan, ut placerat velit pharetra. Mauris volutpat quam eu aliquam gravida. Nulla molestie auctor justo sit amet blandit. Phasellus in eros nec risus semper venenatis a id sapien. Integer et varius augue, at ultricies ligula. Pellentesque lacinia augue lectus, et tempor ex convallis in. Vestibulum eget massa augue.</p>
+                            <p >Ut congue rutrum risus a gravida. Phasellus ut lacinia neque. Donec convallis ligula aliquet sem fermentum, nec venenatis justo blandit. Vivamus sit amet nulla nulla. Nam tincidunt congue turpis, sed bibendum nisl faucibus et. Etiam bibendum odio metus, at scelerisque justo molestie in. Curabitur vel suscipit leo. Sed non erat pellentesque, scelerisque purus vel, consequat nisl. Nullam diam metus, suscipit sed arcu vel, sagittis ultrices nulla. Curabitur id tortor turpis. Integer sit amet fermentum metus, ut porttitor lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque id turpis id ante eleifend feugiat. Nunc accumsan iaculis elit, nec commodo erat ultrices sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ultricies neque et arcu pretium molestie sed vel sem.
+
+                                Vestibulum malesuada pulvinar quam ac elementum. Maecenas pharetra ipsum quis varius posuere. Nulla arcu est, ullamcorper sed pulvinar non, accumsan sed nibh. Curabitur cursus, lorem a vehicula tempus, lacus tellus dignissim ex, sit amet luctus ligula felis vel nisl. Vivamus at faucibus nibh. Quisque euismod semper dolor, id mollis enim commodo rhoncus. Duis sit amet erat vitae velit fringilla sagittis. Curabitur tempus vehicula nisi, sit amet iaculis mauris vulputate a. Integer mauris orci, convallis ut erat sed, rhoncus egestas felis. Curabitur viverra lacus a leo iaculis vulputate. Praesent eu blandit quam, sit amet laoreet nibh. In in neque in massa hendrerit aliquet eu ac velit. Donec laoreet ullamcorper metus, id semper ante posuere vitae. Phasellus diam diam, accumsan vitae aliquam in, maximus quis est. Nullam libero felis, lacinia ut felis varius, ornare bibendum dolor.</p>
+                            <img class="image-responsive" src="https://i.imgur.com/MW9lWlf.jpg" alt="Photoshop-image" align="center">  
+                            <p>In dignissim libero ac elit feugiat feugiat. Donec laoreet augue quis auctor lobortis. Donec convallis a ligula nec pellentesque. Nam ac fermentum felis. Curabitur turpis velit, ultricies feugiat laoreet nec, tempus sit amet nisi. Suspendisse sed arcu sem. Quisque non dolor dui. Vivamus vitae consectetur dolor. Quisque in dolor a elit dignissim rhoncus. Donec at mollis leo. Morbi nec lacinia enim, sit amet celerisque ipsum. Suspendisse rhoncus leo in suscipit fringilla.</p>  
+                            <p>Phasellus eu condimentum quam, imperdiet ullamcorper lorem. Etiam venenatis dui quam, id convallis sem accumsan in. Mauris maximus nisl sed ipsum iaculis, non egestas erat maximus. Aliquam aliquam lorem luctus ligula iaculis, vitae imperdiet tellus eleifend. Integer viverra lorem tincidunt nulla fringilla, et dignissim urna lacinia. Morbi eleifend commodo est, pellentesque egestas dolor venenatis at. Aliquam id lectus at arcu rhoncus malesuada ut non quam. Sed eu maximus ligula. Donec cursus iaculis sodales.</p>
+                            <p>Aenean vestibulum ex elementum aliquet egestas. Pellentesque suscipit aliquam magna, eu ullamcorper quam placerat vitae. Nam elementum quam facilisis odio lacinia fringilla. Sed urna neque, sodales nec elit at, semper pharetra orci. Curabitur vestibulum, risus ac pellentesque molestie, ante magna iaculis sem, ut dapibus diam felis ut enim. Etiam quis rutrum leo, hendrerit hendrerit dolor. Aenean in nisi in lorem posuere commodo vel ac elit. Nunc vulputate commodo ornare.</p>
+                            <p>Suspendisse id pharetra dolor, ut dignissim orci. Morbi eleifend metus urna, at viverra elit aliquam eget. Cras feugiat, est ac molestie tempus, ex nisi sollicitudin augue, eget vulputate dolor ipsum ut ipsum. Mauris elit dolor, mattis quis nunc a, luctus molestie lacus. Fusce ullamcorper ex in leo venenatis vestibulum. Suspendisse sodales sed lectus nec interdum. Morbi quam odio, dignissim sit amet eros non, mattis rutrum massa. Pellentesque ullamcorper vitae nisi id finibus. Aenean aliquet tortor vel bibendum commodo. Cras vel leo mattis, tempor tortor in, ornare sem. Suspendisse non malesuada eros. Nunc aliquet, lectus ut rutrum molestie, tortor purus rutrum lacus, eget dictum purus odio eget orci.</p>
+                                </article>
+                    </p>
+                    <p>
+                            <div class="bottom-reaction">
+                                     <div class="platform">
+                                       <a href="#"><div>Design</div></a> 
+                                       <a href="#"><div>Sketch</div></a> 
+                                       <a href="#"><div>Photoshop</div></a> 
+                                       <a href="#"><div>UI</div></a> 
+                                       <a href="#"><div>UX</div></a> 
+                                     </div>
+                                     <div class="reaction-dup">
+                                        <a href="#" style="text-decoration:none; color:red; margin-right:-10px">&#x2764 125 likes</a>
+                                        <a href="#" style="text-decoration:none; color:#999"><span class="point1"><b>&#8729</b></span>&#128172 6 comments</a>
+                                        <a href="#" style="text-decoration:none; color:#999"><span class="point2"><b>&#8729</b></span><div class="share-icon"><img src="https://i.imgur.com/udsJ7qg.png"></div> Share</a>
+                                        
+                                    </div>
+                            </div>
+                    </p>
+                    <div class="comment-section">
+                           <!-- <form>
+                              <input type="text" name="comment" placeholder="Write a response" />-->
+                               <button type="submit" name="submit">Publish</button>
+                          <!--  </form> -->
+                            <img src="https://i.imgur.com/dAu7MMu.png" class="comm-avatar">
+                            <img src="https://i.imgur.com/4zMSZFt.png" class="main-input">
+                            <div class="comm-number"><b>6 Comments</b></div>
+                            <div class="comm-hr"><p><hr></p></div>
+                            <img src="https://i.imgur.com/dAu7MMu.png" class="avatar1">
+                            <img src="https://i.imgur.com/0mUly5l.png" class="comm1">
+                            <div class="comment1"><p><b>Meng To .</b> 1hr ago</p><p>Curabitur porta fringilla tristique. Ut maximus accumsan</p><p>  justo,vitae auctortellus placerat in.</p></div>
+                            <img src="https://i.imgur.com/dAu7MMu.png" class="avatar2">
+                            <img src="https://i.imgur.com/nYK6viP.png" class="comm2">
+                            <div class="comment2"><p><b>Ilja Miskov .</b> 43m ago</p><p><b>@Meng To: </b>Phasellus suscipit lectus et ex placerat.</p></div>
+                            <img src="https://i.imgur.com/dAu7MMu.png" class="avatar3">
+                            <img src="https://i.imgur.com/0mUly5l.png" class="comm3">
+                            <div class="comment3"><p><b>Guest .</b> 39m ago</p><p>Phasellus suscipit lectus et ex placerat.</p></div>
+                            <img src="https://i.imgur.com/dAu7MMu.png" class="avatar4">
+                            <img src="https://i.imgur.com/0mUly5l.png" class="comm4">
+                            <div class="comment4"><p><b>Darth Vader .</b> 31m ago</p><p>Nulla ac suscipit augue, vitae posuere orci.</p></div>
+                            <img src="https://i.imgur.com/dAu7MMu.png" class="avatar5">
+                            <img src="https://i.imgur.com/nYK6viP.png" class="comm5">
+                            <div class="comment5"><p><b>Ilja Miskov .</b> 43m ago</p><p>Nulla ac suscipit augue, vitae posuere orci.</p></div>
+                            <img src="https://i.imgur.com/dAu7MMu.png" class="avatar6">
+                            <img src="https://i.imgur.com/0mUly5l.png" class="comm6">
+                            <div class="comment6"><p><b>Alexander Zaytsev .</b> 43m ago</p><p>Nulla ac suscipit augue, vitae posuere orci.</p></div>
+                    </div>
+                </div>
+                <div class="bottom-hr">
+                    <hr>
+                </div>
+                <div class="bottom">
+                    <span><a href="#" class="previous round">&#8249;</a></span>
+                     <span><a href="#" class="next round">&#8250;</a></span>
+                </div>
+                <div class="bottom-pre"><a href="#">Previous article
+                    <br /><b>Design circulation</b></a>
+                </div>
+                <div class="bottom-nex"><a href="#">Next article
+                    <br /><b>True self of a designer</b></a>
+                </div>
+                <div class="bottom-nav">
+                    <div class="copyright">© 2015 Ilja Miskov</div>
+                    <div class="note"><em>The only way to do great work is to love what you do.</em></div>
+                    <a href="#"><div class="fac"><img src="https://i.imgur.com/Y5XuPlN.png"></div></a>
+                    <a href="#"><div class="twi"><img src="https://i.imgur.com/gxNhBW7.png"></div></a>
+                    <a href="#"><div class="inst"><img src="https://i.imgur.com/xTWb3t1.png"></div></a>
+                    <a href="#"><div class="dribb"><img src="https://i.imgur.com/upRunDU.png"></div></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
